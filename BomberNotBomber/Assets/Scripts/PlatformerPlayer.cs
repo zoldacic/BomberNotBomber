@@ -20,10 +20,10 @@ public class PlatformerPlayer : MonoBehaviour
         _body.velocity = movement;
 
         // Somtimes need more TLC?
-        if (!Mathf.Approximately(0, deltaX))
-        {
-            transform.rotation = deltaX > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
-        }
+        //if (!Mathf.Approximately(0, deltaX))
+        //{
+        //    transform.rotation = deltaX > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+        //}
 
         if (Input.GetButtonDown("Jump") && Mathf.Abs(_body.velocity.y) < 0.001f)
         {
