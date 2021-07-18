@@ -15,6 +15,8 @@ public class PlatformerPlayer : MonoBehaviour
 
     void Update()
     {
+        #if UNITY_STANDALONE || UNITY_WEBPLAYER
+
         float deltaX = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
         Vector2 movement = new Vector2(deltaX, _body.velocity.y);
         _body.velocity = movement;
@@ -29,5 +31,9 @@ public class PlatformerPlayer : MonoBehaviour
         {
             _body.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
+
+        #elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+
+        #endif //End of mobile platform dependendent compilation section started above with #elif
     }
 } 
