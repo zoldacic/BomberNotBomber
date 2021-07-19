@@ -35,6 +35,6 @@ public class InputManager : MonoBehaviour
 
     private void EndTouch(InputAction.CallbackContext ctx)
     {
-        throw new NotImplementedException();
+        Debug.Log($"Touch ended {touchControls.Gameplay.TouchPosition.ReadValue<Vector2>()}");
     }
 }
