@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float Speed = 250.0f;
     public float JumpForce = 1;
 
-    public Joystick Joystick;
+   // public Joystick Joystick;
 
     private Rigidbody2D _body;
 
@@ -18,9 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float deltaX = Joystick.Horizontal * Speed * Time.deltaTime;
-        Vector2 movement = new Vector2(deltaX, _body.velocity.y);
-        _body.velocity = movement;
+        //float deltaX = Joystick.Horizontal * Speed * Time.deltaTime;
+        //Vector2 movement = new Vector2(deltaX, _body.velocity.y);
+        //_body.velocity = movement;
 
         //if (Input.GetButtonDown("Jump") && Mathf.Abs(_body.velocity.y) < 0.001f)
         //{
