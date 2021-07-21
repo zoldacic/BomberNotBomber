@@ -27,7 +27,7 @@ public class InputManager : MonoBehaviour
         touchControls.Gameplay.TouchPress.started += ctx => StartTouch(ctx);
         touchControls.Gameplay.TouchPress.canceled += ctx => EndTouch(ctx);
     }
-
+    
     private void StartTouch(InputAction.CallbackContext ctx)
     {
         Debug.Log($"Touch started {touchControls.Gameplay.TouchPosition.ReadValue<Vector2>()}");
