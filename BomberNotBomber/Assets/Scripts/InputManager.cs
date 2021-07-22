@@ -24,17 +24,17 @@ public class InputManager : MonoBehaviour
 
     private void Start()
     {
-        touchControls.Gameplay.TouchPress.started += ctx => StartTouch(ctx);
-        touchControls.Gameplay.TouchPress.canceled += ctx => EndTouch(ctx);
+        touchControls.Gameplay.Move.started += ctx => StartTouch(ctx);
+        touchControls.Gameplay.Move.canceled += ctx => EndTouch(ctx);
     }
     
     private void StartTouch(InputAction.CallbackContext ctx)
     {
-        Debug.Log($"Touch started {touchControls.Gameplay.TouchPosition.ReadValue<Vector2>()}");
+        Debug.Log($"Touch started {touchControls.Gameplay.Move.ReadValue<Vector2>()}");
     }
 
     private void EndTouch(InputAction.CallbackContext ctx)
     {
-        Debug.Log($"Touch ended {touchControls.Gameplay.TouchPosition.ReadValue<Vector2>()}");
+        Debug.Log($"Touch ended {touchControls.Gameplay.Move.ReadValue<Vector2>()}");
     }
 }
