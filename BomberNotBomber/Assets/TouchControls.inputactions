@@ -1,66 +1,28 @@
 {
-    "name": "New Controls",
+    "name": "TouchControls",
     "maps": [
         {
             "name": "Gameplay",
             "id": "56f9ab1c-2f80-420a-9889-4a34ce20f974",
             "actions": [
                 {
-                    "name": "TouchInput",
-                    "type": "PassThrough",
+                    "name": "Move",
+                    "type": "Value",
                     "id": "b761e90c-aeb3-4561-9d34-778a4608223c",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "TouchPress",
-                    "type": "Button",
-                    "id": "8beef481-c9fd-42a2-9395-6809fe13a8c7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press(behavior=2)"
-                },
-                {
-                    "name": "TouchPosition",
-                    "type": "PassThrough",
-                    "id": "71f419e9-d4fe-438b-a6b0-d005b72f8a2d",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "Press(behavior=2)"
+                    "interactions": ""
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "e865b7e9-e3ef-4885-aee8-c12d126c0cee",
-                    "path": "<Touchscreen>/primaryTouch",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "TouchCS",
-                    "action": "TouchInput",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d6ba717f-34ba-4c9d-a8f9-1c7014ea0d67",
-                    "path": "<Touchscreen>/primaryTouch/press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TouchCS",
-                    "action": "TouchPress",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c9b8db54-0a9b-497b-9373-03d5b39e2ccd",
-                    "path": "<Touchscreen>/primaryTouch/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TouchCS",
-                    "action": "TouchPosition",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
